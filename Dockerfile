@@ -3,7 +3,7 @@
 # needed to build icetray and all IceCube test data
 ###############################################################
 
-FROM icecube/ubuntu:latest
+FROM icecube/ubuntu:2016.09.04
 
 MAINTAINER Claudio Kopper <ckopper@icecube.wisc.edu>
 
