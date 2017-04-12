@@ -3,7 +3,7 @@
 # needed to build icetray and all IceCube test data
 ###############################################################
 
-FROM icecube/ubuntu:2016.09.04
+FROM icecube/ubuntu:2017.03.24
 
 MAINTAINER Claudio Kopper <ckopper@icecube.wisc.edu>
 
@@ -43,7 +43,7 @@ RUN mkdir /opt/i3-data/photon-tables && \
 
 # install I3_TESTDATA
 RUN mkdir /opt/i3-data/i3-test-data && \
-    rsync -vrlpt --delete code.icecube.wisc.edu::Offline/test-data/ /opt/i3-data/i3-test-data/ && \
+    rsync -vrlpt --delete code.icecube.wisc.edu::Offline/test-data/releases/V00-00-00/ /opt/i3-data/i3-test-data/ && \
     chmod -R u+rwX,go+rX,go-w /opt/i3-data/i3-test-data
 ENV I3_TESTDATA /opt/i3-data/i3-test-data
 
